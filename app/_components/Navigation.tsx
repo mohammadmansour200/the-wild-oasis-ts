@@ -5,7 +5,7 @@ export default async function Navigation() {
 	const session = await auth();
 	return (
 		<nav className="z-10 text-xl">
-			<ul className="flex gap-16 items-center">
+			<ul className="flex gap-10 md:gap-16 items-center">
 				<li>
 					<Link
 						href="/cabins"
@@ -34,7 +34,7 @@ export default async function Navigation() {
 								alt={session?.user?.name ?? ""}
 								referrerPolicy="no-referrer"
 							/>
-							<span>Guest area</span>
+							<span className="hidden md:block">Guest area</span>
 						</Link>
 					) : (
 						<Link

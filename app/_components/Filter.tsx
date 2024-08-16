@@ -15,7 +15,6 @@ function Filter() {
 }
 interface IButtonProps {
 	filter: FilterType;
-
 	children: string;
 }
 function Button({ filter, children }: IButtonProps) {
@@ -34,7 +33,7 @@ function Button({ filter, children }: IButtonProps) {
 	return (
 		<button
 			onClick={() => handleFilter(filter)}
-			className={`px-5 py-2 hover:bg-primary-700 ${filter === activeFilter ? "bg-primary-700 text-primary-50" : ""}`}
+			className={`px-3 py-2 hover:bg-primary-700 ${filter === activeFilter ? "bg-primary-700 text-primary-50" : ""}`}
 		>
 			{children}
 		</button>

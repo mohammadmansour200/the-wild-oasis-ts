@@ -22,7 +22,7 @@ export default function Page({ searchParams }: ICabinsPageProps) {
 			<h1 className="text-4xl mb-5 py-12 text-accent-400 font-medium">
 				Our Luxury Cabins
 			</h1>
-			<p className="text-primary-200 text-lg mb-10">
+			<p className="text-primary-200 text-lg mb-10 mx-3">
 				Cozy yet luxurious cabins, located right in the heart of the Egypt's
 				deserts near Lake Qarun. Imagine waking up to beautiful golden sand
 				dunes, spending your days sand-skating or stargazing, or just relaxing

@@ -33,7 +33,7 @@ export default async function Page({ params }: ICabinPageProps) {
 	metadata.description = description;
 
 	return (
-		<div className="max-w-6xl mx-auto mt-8">
+		<div className="flex justify-center items-center flex-col mt-8">
 			<Cabin cabin={cabin} />
 			<div>
 				<h2 className="text-5xl font-semibold text-center">

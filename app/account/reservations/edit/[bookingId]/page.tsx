@@ -10,7 +10,7 @@ export default async function Page({ params }: IEditBookingPageProps) {
 	const booking = await getBooking(params.bookingId);
 	const editBookingWithData = updateReservation.bind(null, booking);
 	return (
-		<div>
+		<div className="mx-10">
 			<h2 className="font-semibold text-2xl text-accent-400 mb-7">
 				Edit Reservation #{params.bookingId}
 			</h2>

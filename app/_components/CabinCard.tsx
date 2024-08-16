@@ -12,8 +12,8 @@ function CabinCard({ cabin }: ICabinCardProps) {
 	const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
 
 	return (
-		<div className="flex border-primary-800 border">
-			<div className="flex-1 relative">
+		<div className="flex border-primary-800 border mx-2">
+			<div className="flex-1 relative aspect-square">
 				<Image
 					fill
 					src={image}
