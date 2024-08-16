@@ -1,9 +1,10 @@
 import { getBookedDatesByCabinId, getCabin } from "@/app/_lib/data-service";
-import { NextApiRequest } from "next";
+
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+import { NextRequest } from "next/server";
 
 export async function GET(
-	_request: NextApiRequest,
+	_request: Request | NextRequest,
 	{ params }: { params: Params },
 ) {
 	try {
