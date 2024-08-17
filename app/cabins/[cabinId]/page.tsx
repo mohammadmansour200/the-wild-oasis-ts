@@ -1,7 +1,7 @@
 import Cabin from "@/app/_components/Cabin";
 import Reservation from "@/app/_components/Reservation";
 import Spinner from "@/app/_components/Spinner";
-import { getCabin, getCabins } from "@/app/_lib/data-service";
+import { getCabin } from "@/app/_lib/data-service";
 import { Metadata } from "next";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { Suspense } from "react";
@@ -11,15 +11,6 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
 	title: "",
 };
-export async function generateStaticParams() {
-	const cabins = await getCabins();
-
-	const IDs = cabins.map((cabin) => {
-		cabinId: cabin.id.toString();
-	});
-
-	return IDs;
-}
 
 interface ICabinPageProps {
 	params: Params;
