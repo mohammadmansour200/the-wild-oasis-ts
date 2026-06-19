@@ -166,9 +166,14 @@ interface ICountries {
 export async function getCountries() {
 	try {
 		const res = await fetch(
-			"https://restcountries.com/v2/all?fields=name,flag",
-		);
-		const countries: ICountries[] = await res.json();
+			"https://www.apicountries.com/countries",
+    );
+		const data = await res.json()
+    const countries: ICountries[] = data.map((item: any) => ({
+			name: item.nativeName || "",
+			flag: item.flags?.svg || "",
+			independent: item.independent ?? false
+		}));
 		const countriesWithoutIsNotReal = countries.filter(
 			(obj) => obj.name !== "Israel",
 		);
