@@ -30,7 +30,7 @@ export default function Page({ searchParams }: ICabinsPageProps) {
 				own little home away from home. The perfect spot for a peaceful, calm
 				vacation. Welcome to paradise.
 			</p>
-			<div className="flex justify-end mb-8">
+			<div className="flex justify-center mb-8">
 				<Filter />
 			</div>
 			<Suspense key={filter} fallback={<Spinner />}>

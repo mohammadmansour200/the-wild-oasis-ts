@@ -6,7 +6,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 function Filter() {
 	return (
 		<div className="border border-primary-800 flex">
-			<Button filter="all">All cabins</Button>
+			<Button filter="all">All</Button>
 			<Button filter="small">2&mdash;3 guests</Button>
 			<Button filter="medium">4&mdash;7 guests</Button>
 			<Button filter="large">8&mdash;12 guests</Button>
